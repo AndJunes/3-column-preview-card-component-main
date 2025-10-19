@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root{
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-gray: #f2f2f2;
+    --color-green-950: #004140;
+    --color-green-500: #19b89d;
+    --color-cyan-800: #006971;
+    --color-cyan-500: #26b5c0;
+    --color-gold-500: #e28625;
+    --color-gold-200: #ffd473;
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+h2, p, a{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    color: var(--color-gray);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-gray);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin: 80px 24px;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 920px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.content{
+    display: grid;
+    padding: 48px;
+}
+
+.content.gold{
+    background-color: var(--color-gold-500);
+}
+
+.content.gold .content__button{
+    color: var(--color-gold-500);
+}
+
+.content.cyan{
+    background-color: var(--color-cyan-800);
+}
+
+.content.cyan .content__button{
+    color: var(--color-cyan-800);
+}
+
+.content.green{
+    background-color: var(--color-green-950);
+}
+
+.content.green .content__button{
+    color: var(--color-green-950);
+}
+
+.content__title{
+    font-family: 'Big Shoulders', Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 700;
+    padding-top: 32px;
+    padding-bottom: 24px;
+    text-transform: uppercase;
+}
+
+.content__description{
+    font-family: 'Lexend Deca';
+    font-size: 15px;
+    line-height: 1.65;
+    padding-bottom: 24px;
+    opacity: 0.8;
+}
+
+.content__button{
+    display: flex;
+    height: 48px;
+    width: 147px;
+    padding: 8px 16px;
+    background-color: var(--color-white);
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    font-family: 'Lexend Deca';
+    font-size: 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.content__button:hover {
+    background-color: transparent;
+    border: 2px solid var(--color-white);
+    color: var(--color-white) !important;
+}
+.attribution {
+    font-family: 'Big Shoulders', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: hsl(0, 0%, 50%);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px 0;
+    background-color: white;
+    border-top: 1px solid hsl(0, 0%, 90%);
+}
+
+.attribution a {
+    color: var(--color-green-950);
+    text-decoration: none;
+}
+
+/* Tablet */
+@media (min-width: 608px) {
+    main {
+        margin: 80px 40px;
+    }
+    
+    .content {
+        padding: 60px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 940px) {
+    main {
+        flex-direction: row;
+        margin: 0 20px;
+    }
+    
+    .content {
+        max-width: 307px;
+        padding: 48px;
+    }
+    
+    .content__description {
+        padding-bottom: 80px;
+    }
+    
+    .content.gold {
+        border-radius: 8px 0 0 8px;
+    }
+    
+    .content.green {
+        border-radius: 0 8px 8px 0;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    main {
+        margin: 0;
+    }
+}
